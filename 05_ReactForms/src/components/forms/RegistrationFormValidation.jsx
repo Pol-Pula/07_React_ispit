@@ -86,7 +86,7 @@ function RegistrationFormValidation() {
 
     setErrors(NewErrors);
 
-    return (
+    return (  // vraća true ili false, ovidno je li ikoje od ovih polja imalo grešku
       NewErrors.firstName === "" &&
       NewErrors.lastName === "" &&
       NewErrors.email == "" &&
@@ -96,7 +96,8 @@ function RegistrationFormValidation() {
   }
 
   function handleChange(event) {
-    const { name, value, type, checked } = event.target;
+    const { name, value, type, checked } = event.target; 
+    // slično što i 'const name = event.target.name', itd. (destrukturiranje)
 
     setFormData((prev) => ({
       ...prev,

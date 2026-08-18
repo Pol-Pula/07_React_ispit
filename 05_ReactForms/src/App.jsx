@@ -20,6 +20,7 @@ function App() {
       <RegistrationForm />
       <h2>Registration form with Validation</h2>
       <RegistrationFormValidation />
+      <DynamicForm fields={fields} />
     </>
   );
 }
